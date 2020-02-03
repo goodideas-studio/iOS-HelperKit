@@ -75,7 +75,15 @@ cd iOS-HelperKit
 git remote add upstream https://github.com/goodideas-studio/iOS-HelperKit
 ```
 
-4. 發起 Pull Request
+4. 撰寫更動, 並發起 Pull Request
 
-在 fork 的專案中作更動, 簡易使用 新的 Branch, 如此 master 可以模擬 upstream
+在 fork 的專案中作更動, 簡易使用 新的 Branch, 如此 master 可以模擬 upstream. 
+
+完成更動後, 確認 GitHub 下 fork 的專案保有你所做的更動, 就可以發起 Pull Request (RP).
+
+下圖是 fork 的專案主頁, 切換至指定 Branch 可以看到 `New pull request` 的按鈕. 點擊按鈕可以發起 PR.
+![](https://i.imgur.com/E3dIR0l.png)
+
+真正發起 PR 之前, 請確認 PR 的箭頭左邊(目標 Branch) 是 `goodideas-studio/iOS-HelperKit`, 填寫必要資訊, 即可完成 PR.
+![](https://i.imgur.com/Y7z7VbN.png)
 
