@@ -1,15 +1,16 @@
 import XCTest
-@testable import GISHelperKit
+import GISHelperKit
 
 final class GISHelperKitTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(GISHelperKit().text, "Hello, World!")
-    }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+	func testArraySum() {
+		let list = (1...5).map{$0}
+		let expect = list
+			.reduce(0, +)
+		let result = list.sum(by: \.self)
+		XCTAssertEqual(expect, result)
+	}
+	
+	static var allTests = [
+		("testArraySum", testArraySum),
+	]
 }

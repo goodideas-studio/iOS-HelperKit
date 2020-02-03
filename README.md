@@ -1,9 +1,9 @@
 # GISHelperKit
 
-goodideas-studio-HelperKit
+goodideas-studio-HelperKit~
 
 
-## 👨🏻‍💻 關於 HelperKit：
+## 👨🏻‍💻 關於 HelperKit~：
 
 > 這邊是好想工作室 iOS Camp 共同建立的 HelperKit。你可以在這邊找到 iOS 開發相關的項目，無論是功能、框架、技術文章或工具。若是你也有想要分享的功能或技術，無論功能規模大小，也歡迎列在下方 HelperKit 表格中。
 
