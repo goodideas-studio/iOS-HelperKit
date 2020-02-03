@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Weak",
+        "repositoryURL": "https://github.com/ytyubox/Weak",
+        "state": {
+          "branch": null,
+          "revision": "2c7fe37aafe616942001c4d102b37ddf0cbf6a4a",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
