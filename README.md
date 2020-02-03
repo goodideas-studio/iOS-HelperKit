@@ -51,3 +51,31 @@ goodideas-studio-HelperKit~
 |日期|許願內容|許願者|解答|
 |:---:|---|:---:|:---:|
 |12/23|有沒有 dismiss 到 rootVC 的方法？ |Jeremy|[DismissToRootVC](https://gist.github.com/JeremyXue77/b8e8187084a214591d4345a5234316b2)|
+
+## 如何貢獻 HelperKit
+
+1. fork 一份 repo 至 你的 GitHub 賬號
+
+![123](https://help.github.com/assets/images/help/repository/fork_button.jpg)
+
+經過一段等待之後, 你會看到網頁會跳轉至以下畫面的 repo 主頁
+![](https://i.imgur.com/OUtCawa.png)
+ 
+2. 將這份 `Fork` 的 repo clone 至本機
+
+可以使用 git clone 指令
+```bash
+git clone https://github.com/<你的 GitHub 賬號>/iOS-HelperKit
+```
+3. 增加 upstream remote (可選的)
+接下來的部分是推薦的做法, 透過 remote 的方式, 將原本的 repo 設為 upstream, 可以仔細區分專案.
+
+```bash
+cd iOS-HelperKit
+git remote add upstream https://github.com/goodideas-studio/iOS-HelperKit
+```
+
+4. 發起 Pull Request
+
+在 fork 的專案中作更動, 簡易使用 新的 Branch, 如此 master 可以模擬 upstream
+
