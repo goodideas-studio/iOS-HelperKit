@@ -52,6 +52,36 @@ goodideas-studio-HelperKit~
 |:---:|---|:---:|:---:|
 |12/23|有沒有 dismiss 到 rootVC 的方法？ |Jeremy|[DismissToRootVC](https://gist.github.com/JeremyXue77/b8e8187084a214591d4345a5234316b2)|
 
+## 如何在你的專案中使用 HelperKit
+
+### 1. XCode Project
+XCode 11 (含以上) 可用 XCode 內建的功能加入 SPM, 詳細內容可以至 [Apple - adding package dependencies to your app](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+1. 至 XCode >  File > Swift Packages > Add Package Dependency
+2. 搜尋 `https://github.com/goodideas-studio/iOS-HelperKit`
+![](https://i.imgur.com/cG6hk9x.png)
+3. 點選 `Next` 加入成功
+4. `import GISHelperKit` 之後便可使用 HelperKit 
+### 2. Package.swift
+
+在 Package.swift 檔案內找到相對應的參數加入
+```swift
+import PackageDescription
+
+let package = Package(
+    ...
+    dependencies: [
+      ...
+        .Package(url: "https://github.com/goodideas-studio/iOS-HelperKit", from: "1.0.0"),
+    ],
+    targets: [
+    .target(
+        name: "...",
+        dependencies: ["GISHelperKit"])
+)
+```
+
+`import GISHelperKit` 之後便可使用 HelperKit 
+
 ## 如何貢獻 HelperKit
 
 1. fork 一份 repo 至 你的 GitHub 賬號
