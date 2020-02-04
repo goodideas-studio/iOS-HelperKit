@@ -59,6 +59,7 @@ goodideas-studio-HelperKit~
 ![123](https://help.github.com/assets/images/help/repository/fork_button.jpg)
 
 經過一段等待之後, 你會看到網頁會跳轉至以下畫面的 repo 主頁
+
 ![](https://i.imgur.com/OUtCawa.png)
  
 2. 將這份 `Fork` 的 repo clone 至本機
@@ -79,7 +80,7 @@ git remote add upstream https://github.com/goodideas-studio/iOS-HelperKit
 
 在 fork 的專案中作更動, 簡易使用 新的 Branch, 如此 master 可以模擬 upstream. 
 
-完成更動後, 確認 GitHub 下 fork 的專案保有你所做的更動, 就可以發起 Pull Request (RP).
+完成更動後, 確認 GitHub 下 fork 的專案保有你所做的更動, 就可以發起 Pull Request (PR).
 
 下圖是 fork 的專案主頁, 切換至指定 Branch 可以看到 `New pull request` 的按鈕. 點擊按鈕可以發起 PR.
 ![](https://i.imgur.com/E3dIR0l.png)
