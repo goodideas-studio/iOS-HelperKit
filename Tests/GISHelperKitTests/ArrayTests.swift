@@ -89,4 +89,26 @@ class ArrayTests: XCTestCase {
 		let result = sample.reduce(keyPath: \.i, 0, +)
 		XCTAssertEqual(expect, result)
 	}
+	
+	func testFlatMap() {
+		let list = (0...10).map({Array(repeating: $0, count: $0)})
+		let expect = list.flatMap({$0})
+		let result = list.flatMap(\.self)
+		XCTAssertEqual(expect
+			, result)
+	}
+	
+	func testForEachM() {
+		var array = [1, 2, 3, 4]
+		let expect = array.map({$0*2})
+		array.forEachM({$0*=2})
+		XCTAssertEqual(expect, array)
+	}
+	
+	func testRemoveDuplicate() {
+		let array = [4, 4, 1, 1, 2, 2, 3, 3]
+		let expect = [4, 1, 2, 3]
+		let result = array.removeDuplicate()
+		XCTAssertEqual(expect, result)
+	}
 }
