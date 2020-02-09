@@ -1,9 +1,9 @@
 # GISHelperKit
 
-goodideas-studio-HelperKit
+goodideas-studio-HelperKit~
 
 
-## 👨🏻‍💻 關於 HelperKit：
+## 👨🏻‍💻 關於 HelperKit~：
 
 > 這邊是好想工作室 iOS Camp 共同建立的 HelperKit。你可以在這邊找到 iOS 開發相關的項目，無論是功能、框架、技術文章或工具。若是你也有想要分享的功能或技術，無論功能規模大小，也歡迎列在下方 HelperKit 表格中。
 
@@ -51,3 +51,70 @@ goodideas-studio-HelperKit
 |日期|許願內容|許願者|解答|
 |:---:|---|:---:|:---:|
 |12/23|有沒有 dismiss 到 rootVC 的方法？ |Jeremy|[DismissToRootVC](https://gist.github.com/JeremyXue77/b8e8187084a214591d4345a5234316b2)|
+
+## 如何在你的專案中使用 HelperKit
+
+### 1. XCode Project
+XCode 11 (含以上) 可用 XCode 內建的功能加入 SPM, 詳細內容可以至 [Apple - adding package dependencies to your app](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+1. 至 XCode >  File > Swift Packages > Add Package Dependency
+2. 搜尋 `https://github.com/goodideas-studio/iOS-HelperKit`
+![](https://i.imgur.com/cG6hk9x.png)
+3. 點選 `Next` 加入成功
+4. `import GISHelperKit` 之後便可使用 HelperKit 
+### 2. Package.swift
+
+在 Package.swift 檔案內找到相對應的參數加入
+```swift
+import PackageDescription
+
+let package = Package(
+    ...
+    dependencies: [
+      ...
+        .Package(url: "https://github.com/goodideas-studio/iOS-HelperKit", from: "1.0.0"),
+    ],
+    targets: [
+    .target(
+        name: "...",
+        dependencies: ["GISHelperKit"])
+)
+```
+
+`import GISHelperKit` 之後便可使用 HelperKit 
+
+## 如何貢獻 HelperKit
+
+1. fork 一份 repo 至 你的 GitHub 賬號
+
+![123](https://help.github.com/assets/images/help/repository/fork_button.jpg)
+
+經過一段等待之後, 你會看到網頁會跳轉至以下畫面的 repo 主頁
+
+![](https://i.imgur.com/OUtCawa.png)
+ 
+2. 將這份 `Fork` 的 repo clone 至本機
+
+可以使用 git clone 指令
+```bash
+git clone https://github.com/<你的 GitHub 賬號>/iOS-HelperKit
+```
+3. 增加 upstream remote (可選的)
+接下來的部分是推薦的做法, 透過 remote 的方式, 將原本的 repo 設為 upstream, 可以仔細區分專案.
+
+```bash
+cd iOS-HelperKit
+git remote add upstream https://github.com/goodideas-studio/iOS-HelperKit
+```
+
+4. 撰寫更動, 並發起 Pull Request
+
+在 fork 的專案中作更動, 簡易使用 新的 Branch, 如此 master 可以模擬 upstream. 
+
+完成更動後, 確認 GitHub 下 fork 的專案保有你所做的更動, 就可以發起 Pull Request (PR).
+
+下圖是 fork 的專案主頁, 切換至指定 Branch 可以看到 `New pull request` 的按鈕. 點擊按鈕可以發起 PR.
+![](https://i.imgur.com/E3dIR0l.png)
+
+真正發起 PR 之前, 請確認 PR 的箭頭左邊(目標 Branch) 是 `goodideas-studio/iOS-HelperKit`, 填寫必要資訊, 即可完成 PR.
+![](https://i.imgur.com/Y7z7VbN.png)
+
