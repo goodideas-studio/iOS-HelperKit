@@ -1,9 +1,6 @@
-public protocol TabDescription {
-	func tabDescription(max:Int) -> String
-}
-public extension TabDescription where Self:CustomStringConvertible {
-	func tabDescription(max:Int) -> String {
-		let MaxtabCount = (max / 4) + 1
+extension CustomStringConvertible {
+    public func description(tabWithMax max:Int) -> String {
+        let MaxtabCount = (max / 4) + 1
 		let count = description.count
 		let myTabCount = MaxtabCount - (count / 4)
 		var resultString = description
@@ -13,5 +10,3 @@ public extension TabDescription where Self:CustomStringConvertible {
 		return resultString
 	}
 }
-
-extension String: TabDescription { }
